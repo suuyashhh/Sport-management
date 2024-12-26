@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="Sport_management.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>college sports managament system</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+    <link rel="stylesheet" href="assetsttts/css/carousel.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style>
+        #btn_lbl {
+            color: red;
+            font-size: 18px;
+            text-decoration: none;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background: #495057;">
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+                    <img src="images/BVDU-ed.png" class="navbar-brand" alt="CSMS" height="60" width="60" />
+                    <a class="navbar-brand" href="#">BVDU</a>
+                    <a class="navbar-toggler bg-dark" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon bg-dark"></span>
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="Home.aspx">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="CollageTeam.aspx">College Team</a>
+                            </li>                            
+                            <li class="nav-item">
+                                <a class="nav-link " href="Registration.aspx">Sports Day Registration</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="payment.aspx">Purchase</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="Contact.aspx">Contact Us</a>
+                            </li>
+                        </ul>
+
+
+
+                        <asp:Label runat="server" class="lbl_name" ID="btn_lbl" Style="margin:0 30px;"></asp:Label>
+                     
+                        <asp:Button runat="server" CssClass="btn btn-outline-success my-2 my-sm-0" ID="btnout" Text="Sign Out" OnClick="btnout_Click"    />
+                        <a runat="server" id="btn_login" href="Login.aspx" class="btn btn-outline-success my-2 my-sm-0">Sign In</a>
+
+                    </div>
+                </nav>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <!-- FOOTER -->
+            <footer id="foot" class="container-fluid card-body">
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
